@@ -1,0 +1,141 @@
+:root {
+    --green-light: #e6f4ec;
+    --green: #45a875;
+    --green-dark: #549f7c;
+    --text-dark: #2d3748;
+    --text-light: #f0f0f0;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--green-light);
+    color: var(--text-dark);
+  }
+  
+  header {
+    background-color: var(--green);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color:#2d3748;
+  }
+  
+  nav button {
+    background: white;
+    border: none;
+    margin-left: 10px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--green-dark);
+  }
+  
+  #app-main {
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .page {
+    display: none;
+  }
+  
+  .page.active {
+    display: block;
+  }
+  
+  img {
+    width: 100%;
+    border-radius: 12px;
+    margin: 20px 0;
+  }
+  
+  .circle {
+    width: 80px;
+    height: 80px;
+    margin: 30px auto;
+    background: var(--green-dark);
+    border-radius: 50%;
+  }
+  
+  .breathing-steps {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .breathing-steps ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .breathing-steps li {
+    margin: 10px 0;
+  }
+  
+  .article {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .article h3 {
+    font-size: 1.8rem;
+    color: var(--green-dark);
+    margin-bottom: 10px;
+  }
+  
+  .article p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--green-dark);
+    resize: none;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--green-dark);
+    color: white;
+    margin-top: 40px;
+  }
+  
+  .count-number {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--green-dark);
+    text-align: center;
+    margin: 20px ;
+  }

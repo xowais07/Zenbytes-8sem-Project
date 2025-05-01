@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindMate</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Header for Navigation -->
+  <header id="app-header">
+    <h1>🌿MindMate</h1>
+    <nav>
+      <button onclick="navigateTo('home')">Home</button>
+      <button onclick="navigateTo('breathing')">Breathing</button>
+      <button onclick="navigateTo('articles')">Articles</button>
+      <button onclick="navigateTo('journal')">Journal</button>
+      <button onclick="navigateTo('counting')">Reverse Counting</button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="app-main">
+    <!-- Home Page -->
+    <section id="home" class="page active">
+      <h2>Welcome to MindMate</h2>
+      <p>Your personal mental health companion. 🌱</p>
+      <img src="https://images.unsplash.com/photo-1564121211835-e88c852648ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Calm Nature" />
+    </section>
+
+    <!-- Breathing Section -->
+    <section id="breathing" class="page">
+      <h2>🧘 Breathing Exercise</h2>
+      <p>Follow the circle and breathe with it. Inhale... Exhale...</p>
+      <div class="circle" id="breathe-circle"></div>
+      <div class="breathing-steps">
+        <p>Steps for Breathing Exercise:</p>
+        <ul>
+          <li>Inhale slowly for 4 seconds.</li>
+          <li>Hold your breath for 4 seconds.</li>
+          <li>Exhale slowly for 4 seconds.</li>
+          <li>Repeat for 5-10 minutes to feel the relaxation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="articles" class="page">
+      <h2>📖 Mental Health Articles</h2>
+      <div class="article">
+        <h3>5 Minute Breathing for Anxiety</h3>
+        <img src="https://images.unsplash.com/photo-1422205512921-12dac7b3b603?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Peace" />
+        <p>Breathing is a powerful tool to calm the mind. Try inhaling for 4 seconds, holding for 4, and exhaling for 4. Repeat 5 times to reduce anxiety. By focusing on your breath and slowing your inhalation and exhalation, you signal to your brain that it's time to relax. This simple technique can help reduce anxiety and increase feelings of control.</p>
+      </div>
+      <div class="article">
+        <h3>The Science of Deep Breathing</h3>
+        <img src="https://images.unsplash.com/photo-1559595500-e15296bdbb48?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wellbeing" />
+        <p>Deep breathing activates the parasympathetic nervous system, lowering heart rate and promoting calmness. This technique is scientifically proven to reduce stress and anxiety. When you take slow, deep breaths, you engage the diaphragm, increasing oxygen intake and helping to reset your body’s stress response. Practicing deep breathing regularly can contribute to improved well-being.</p>
+      </div>
+      <!-- Added 5 more articles with 50+ words -->
+      <div class="article">
+        <h3>The Power of Journaling for Mental Health</h3>
+        <img src="https://images.unsplash.com/photo-1528938102132-4a9276b8e320?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Writing" />
+        <p>Journaling is a powerful tool for mental health. Writing down your thoughts helps to clear the mind and process emotions. It offers a safe space to express your feelings, track your progress, and reflect on experiences. Regular journaling can lead to greater self-awareness, reduced stress, and improved emotional clarity, which ultimately enhances your overall well-being.</p>
+      </div>
+      <div class="article">
+        <h3>Understanding Mental Health and Its Importance</h3>
+        <img src="https://images.unsplash.com/photo-1620389701363-b1d7a601e0c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mental Health" />
+        <p>Mental health is an essential aspect of overall health. It affects how we think, feel, and behave daily. Good mental health allows us to handle the stresses of life, work productively, and contribute to our communities. Taking care of our mental health through self-care, seeking help, and practicing mindfulness can prevent mental health issues from becoming overwhelming.</p>
+      </div>
+      <div class="article">
+        <h3>How to Practice Mindfulness Every Day</h3>
+        <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mindfulness" />
+        <p>Mindfulness involves paying full attention to the present moment, without judgment. Practicing mindfulness daily can help reduce stress, increase focus, and improve overall well-being. To practice mindfulness, try focusing on your breath, observing your thoughts without attachment, and being fully present during everyday activities. Simple actions, like mindful walking or mindful eating, can also help cultivate mindfulness.</p>
+      </div>
+      <div class="article">
+        <h3>Dealing with Stress Through Meditation</h3>
+        <img src="https://plus.unsplash.com/premium_photo-1665203618989-e04554a539b1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3RyZXNzfGVufDB8fDB8fHww" alt="Meditation" />
+        <p>Meditation is one of the most effective ways to reduce stress. It involves sitting quietly, focusing on your breath, and clearing your mind of distractions. Meditation has been shown to reduce cortisol, the stress hormone, and promote a sense of calm. Whether it’s guided meditation or simply sitting in silence, practicing regularly can help manage stress and improve emotional resilience.</p>
+      </div>
+      <div class="article">
+        <h3>How to Manage Anxiety During Tough Times</h3>
+        <img src="https://images.unsplash.com/photo-1607827448452-6fda561309d0?q=80&w=2053&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Anxiety Relief" />
+        <p>Anxiety can feel overwhelming, but there are strategies to cope. First, try deep breathing exercises to activate your body’s relaxation response. You can also ground yourself by focusing on the present moment, using techniques like the 5-4-3-2-1 grounding exercise. Additionally, reaching out to a support system, whether it’s friends, family, or a therapist, can make a big difference in managing anxiety.</p>
+      </div>
+      <div class="article">
+        <h3>Building Emotional Resilience</h3>
+        <img src="https://images.unsplash.com/photo-1634155938686-24a26c55d71a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cmVjb3Zlcnl8ZW58MHx8MHx8fDA%3D" alt="Resilience" />
+        <p>Emotional resilience is the ability to recover from challenges and setbacks. It's a crucial skill for managing stress, adversity, and life's ups and downs. To build resilience, focus on developing a positive mindset, building supportive relationships, and practicing self-care. Embracing challenges as learning opportunities can help you grow stronger and more resilient in the face of adversity.</p>
+      </div>
+    </section>
+
+    <!-- Journal Section -->
+    <section id="journal" class="page">
+      <h2>📓 Your Journal</h2>
+      <p>Write down your thoughts and emotions.</p>
+      <textarea id="journal-entry" rows="10" placeholder="Start writing your thoughts here..."></textarea>
+      <button onclick="saveJournal()">Save Entry</button>
+      <h3>Previous Entries</h3>
+      <div id="previous-entries"></div>
+    </section>
+
+    <!-- Reverse Counting Section -->
+    <section id="counting" class="page">
+      <h2>🔢 Reverse Counting Therapy</h2>
+      <p>Start from 50, and every time you reach zero, snap your fingers and start again.</p>
+      <div id="count" class="count-number">50</div>
+      <button onclick="reverseCount()">Start Reverse Counting</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MindMate | Stay calm. Stay strong. 💚</p>
+    <!-- <p><strong></strong></p> -->
+    <p>Contact Us: 📞 Phone: +1 234 567 890 📧 Email: support@mindmate.com</p>
+    <!-- <p></p> -->
+    <p>🌍 Address: 123 Wellness St., Suite 101, Mindtown, 12345</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
