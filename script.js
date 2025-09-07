@@ -45,3 +45,5 @@ function navigateTo(pageId) {
       document.getElementById('journal-entry').value = '';
     }
   }
+
+  //changes
